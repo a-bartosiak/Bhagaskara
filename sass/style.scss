@@ -1,15 +1,10 @@
 @import "bootstrap.css";
-
 @font-face {
     font-family: 'existencelight';
     src: url('../fonts/Existence-Light-webfont.eot');
-    src: url('../fonts/Existence-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Existence-Light-webfont.woff') format('woff'),
-         url('../fonts/Existence-Light-webfont.ttf') format('truetype'),
-         url('../fonts/Existence-Light-webfont.svg#existencelight') format('svg');
+    src: url('../fonts/Existence-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Existence-Light-webfont.woff') format('woff'), url('../fonts/Existence-Light-webfont.ttf') format('truetype'), url('../fonts/Existence-Light-webfont.svg#existencelight') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 #header-wrapper {
@@ -19,7 +14,6 @@
     font-family: 'Lato', sans-serif;
     color: white;
 }
-
 // body {
 //   background-color: green;
 //   @media (min-width: 400px) and (max-width: 800px) {
@@ -52,15 +46,14 @@
     margin-top: 20px;
 }
 
-
 .header img {
     height: 80px;
-  @media (min-width: 300px) and (max-width: 800px) {
-    height: 100px;
-  }
-  @media (min-width: 800px) {
-    height: 120px;
-  }
+    @media (min-width: 300px) and (max-width: 800px) {
+        height: 100px;
+    }
+    @media (min-width: 800px) {
+        height: 120px;
+    }
 }
 
 h3 {
@@ -74,7 +67,6 @@ h3 {
     font-weight: 300;
     text-align: center;
 }
-
 // .header img {
 //     height: 120px;
 // }
@@ -116,7 +108,6 @@ h3 {
     list-style: none;
     margin-left: 2em;
 }
-
 //feature
 .featureWrapper {
     background-color: #eeeeee;
@@ -124,10 +115,10 @@ h3 {
 }
 
 .featureDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
 }
 
 .featureDiv img {
@@ -150,6 +141,7 @@ h4 {
     text-align: center;
 }
 // About us
+
 .aboutUs {
     min-height: 80vh;
 }
@@ -165,53 +157,53 @@ h4 {
 }
 
 .nav::after {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-top: 1px solid #9f449b;
-  border-right: 1px solid #9f449b;
-  position: absolute;
-  margin-left: 560px;
-  margin-top: -50px;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #9f449b;
+    border-right: 1px solid #9f449b;
+    position: absolute;
+    margin-left: 560px;
+    margin-top: -50px;
 }
 
 .nav::before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-bottom: 1px solid #9f449b;
-  border-left: 1px solid #9f449b;
-  position: absolute;
-  margin-left: 420px;
-  margin-top: 30px;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #9f449b;
+    border-left: 1px solid #9f449b;
+    position: absolute;
+    margin-left: 420px;
+    margin-top: 30px;
 }
 
-
 span {
-  color: #9f449b;
+    color: #9f449b;
 }
 
 .mobileText {
-  color: #676767;
-  font-size: 0.9em;
-  font-weight: 300;
-  line-height: 36px;
+    color: #676767;
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 36px;
 }
 
 .aboutUs button {
-  color: white;
-  border-radius: 5px;
-  background-color:  #9f449b;
-  width: 12em;
-  height: 3em;
+    color: white;
+    border-radius: 5px;
+    background-color: #9f449b;
+    width: 12em;
+    height: 3em;
 }
 
 .mobile img {
     height: 240px;
 }
 //We lorem and ipsum your aliquam
+
 .weWrapper {
     background-image: url("../images/willLoremAndIpsum.jpg");
     background-size: cover;
@@ -231,17 +223,34 @@ h2 {
 }
 
 .weShape {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 //Our Team
+
+.arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
 .arrow img {
-    height: 10vh;
+    height: 60px;
 }
 
 .ourTeam {
     min-height: 100vh;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+
 }
 
 .photo {
@@ -251,6 +260,7 @@ h2 {
     border-radius: 50%;
 }
 //Our Skills
+
 .ourSkills {
     min-height: 50vh;
 }
@@ -265,6 +275,7 @@ h2 {
     background-color: #f0f0f0;
 }
 //Our services will lorem and ipsum
+
 .data2Wrapper {
     background-color: #eeeeee;
     min-height: 120px;
@@ -277,6 +288,7 @@ h2 {
     min-height: 120px;
 }
 //quotation
+
 .quotationWrapper {
     background-color: #eeeeee;
     min-height: 50vh;
@@ -297,13 +309,19 @@ h2 {
     border-radius: 50%;
 }
 // Our Portfolio
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .gallery img {
     width: 100%;
     background-size: contain;
 }
 
 .ourPortfolio button {
-  background-color: white;
+    background-color: white;
 }
 
 .navOurPortfolio {
@@ -317,39 +335,45 @@ h2 {
 }
 
 .navOurPortfolio::after {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-top: 1px solid #9f449b;
-  border-right: 1px solid #9f449b;
-  position: absolute;
-  margin-left: 560px;
-  margin-top: -50px;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #9f449b;
+    border-right: 1px solid #9f449b;
+    position: absolute;
+    margin-left: 560px;
+    margin-top: -50px;
 }
 
 .navOurPortfolio::before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-bottom: 1px solid #9f449b;
-  border-left: 1px solid #9f449b;
-  position: absolute;
-  margin-left: 390px;
-  margin-top: 30px;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #9f449b;
+    border-left: 1px solid #9f449b;
+    position: absolute;
+    margin-left: 390px;
+    margin-top: 30px;
+}
+// Footer
+
+li {
+  display: flex;
+  flex-direction: column;
 }
 
-// Footer
 input {
-    width: 30em;
-    height: 4em;
-    margin: 1em;
+    width: 400px;
+    height: 50px;
+    margin: 10px;
 }
 
 textarea {
-    width: 30em;
-    height: 8em;
+    width: 400px;
+    height: 100px;
+    margin: 10px;
 }
 
 li {
