@@ -13,57 +13,57 @@
     <header id="header-wrapper">
         <div class="container">
             <div class="row header">
-                <img src="../images/logo.png" alt="logo">
+                <h1> Bhagas<span>kara</span>. </h1>
             </div>
             <div class="row header">
-                <div class="col-xs-6 col-md-12 col-lg-12">
+                <div class="col-xs-12 col-md-12 col-lg-12">
                     <h3> Fusce rutrum pretium lorem semper nulla. </h3>
                     <p> Vestibulum ornare cursus nisl, fermentum tincidunt libero pretium et. Maecenas interdum lugula non <br> fermentum fringilla. </p>
                 </div>
             </div>
             <div class="row header">
-                <div class="col-xs-6 col-md-4 col-lg-4">
+                <div class="col-xs-12 col-md-4 col-lg-4">
                 </div>
                 <div class="col-xs-6 col-md-4 col-lg-4">
                     <div class="col-xs-12 col-md-6 col-lg-6">
-                        <img src="../images/ShapeServices.png" alt="">
+                        <a href="#"> <img src="../images/ShapeServices.png" alt=""> </a>
                     </div>
-                    <div class="col-xs-12 col-md-6 col-lg-6">
-                        <img src="../images/ShapePortfolio.png" alt="">
+                    <div class="col-xs-12 col-md-6 col-lg-6 portfolio">
+                        <a href="#"> <img src="../images/Shape.png" alt=""> </a>
                     </div>
                 </div>
-                <div class="col-xs-6 col-md-4 col-lg-4">
+                <div class="col-xs-12 col-md-4 col-lg-4">
                 </div>
             </div>
             <div class="row header">
                 <div class="col-xs-12 col-md-4 col-lg-4">
                     <div class="col-xs-12 col-md-6 col-lg-6">
-                        <img src="../images/ShapeAbout.png" alt="">
+                        <a href="#"> <img src="../images/ShapeAbout.png" alt=""> </a>
                     </div>
                     <div class="col-xs-12 col-md-6 col-lg-6">
-                        <img src="../images/ShapeTeam.png" alt="">
+                        <a href="#"> <img src="../images/ShapeTeam.png" alt=""> </a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4 col-lg-4">
                 </div>
                 <div class="col-xs-12 col-md-4 col-lg-4">
                     <div class="col-xs-12 col-md-6 col-lg-6">
-                        <img src="../images/ShapeBlog.png" alt="">
+                        <a href="#"> <img src="../images/ShapeBlog.png" alt=""> </a>
                     </div>
                     <div class="col-xs-12 col-md-6 col-lg-6">
-                        <img src="../images/ShapeContact.png" alt="">
+                        <a href="#"> <img src="../images/ShapeContact.png" alt=""> </a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-12 col-lg-12 shapeArrowDown">
-                    <a> <img src="../images/ShapeArrowDown.png" alt=""> </a>
+                    <a href="#"> <img src="../images/ShapeArrowDown.png" alt=""> </a>
                 </div>
             </div>
         </div>
     </header>
     <nav class="container">
-        <div class="row navigation">
+        <div id="navigation" class="row">
             <div class="navLogo">
                 <a href="#"> Bhagas<span>kara</span> </a>
             </div>
@@ -78,7 +78,7 @@
             </ul>
         </div>
     </nav>
-    <section class="featureWrapper">
+    <section id="featureWrapper">
         <article class="container">
             <div class="row feature">
                 <div class="col-xs-12 col-md-6 col-lg-3 featureDiv">
@@ -104,15 +104,15 @@
             </div>
         </article>
     </section>
-    <article class="container aboutUs">
+    <article id="aboutUs" class="container">
         <div class="row">
             <div class="navContainer">
                 <div class="nav"> About <span> us </span> </div>
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-6 mobile">
+            <div class="col-xs-12 col-md-12 col-lg-6 mobile">
                 <img src="../images/Mobile.jpg" alt="">
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-6 mobileText">
+            <div class="col-xs-12 col-md-12 col-lg-6 mobileText">
                 Aliquam metus neque, bibendum sit amet porta at, consequat et enim. In ut turpis non ipsum rhoncus porttitor vel ac nunc. Maecenas interdum dignissim lorem quis auctor. Donec sit amet nulla nisl, aliquam pretium ipsum. Pellentesque sodales ipsum et enim
                 rutrum adipiscing. Quisque tincidunt mattis sapien, vel posuere. <br>
                 <button> Learn more </button>
@@ -127,14 +127,14 @@
             </div>
         </div>
     </article>
-    <article class="container ourTeam">
+    <article id="ourTeam" class="container">
         <div class="row">
             <div class="navContainer">
                 <div class="nav arrow"> Our <span> team </span> </div>
             </div>
             <div class="arrows">
-                <img src="../images/ShapeArrowLeft.png" alt="">
-                <img src="../images/ShapeArrowRight.png" alt="">
+                <a href="#"> <img src="../images/ShapeArrowLeft.png" alt=""> </a>
+                <a href="#"> <img src="../images/ShapeArrowRight.png" alt=""> </a>
             </div>
         </div>
         <div class="row">
@@ -171,18 +171,28 @@
             <div class="navContainer">
                 <div class="nav"> Our <span> skills </span> </div>
             </div>
+            <div id="data">
             <div class="col-xs-12 col-md-6 col-lg-6">
-                <p> Web design 90% </p>
-                <div class="data"> </div>
-                <p> HTML/CSS 75% </p>
-                <div class="data"> </div>
+                <p class=progressBar> Web design <span class="procent"> 90% </span> </p>
+                <div class="data">
+                    <span style="width: 90%"></span>
+                </div>
+                <p class=progressBar> HTML /CSS <span class="procent"> 75% </span> </p>
+                <div class="data">
+                    <span style="width: 75%"></span>
+                </div>
             </div>
             <div class="col-xs-12 col-md-6 col-lg-6">
-                <p> Graphic design 70% </p>
-                <div class="data"> </div>
-                <p> UI/UX 86% </p>
-                <div class="data"> </div>
+                <p class=progressBar> Graphic design <span class="procent"> 70% </span> </p>
+                <div class="data">
+                    <span style="width: 70%"></span>
+                </div>
+                <p class=progressBar> UI / UX <span class="procent"> 86% </span> </p>
+                <div class="data">
+                    <span style="width: 86%"></span>
+                </div>
             </div>
+          </div>
         </div>
     </article>
     <article class="weWrapper">
@@ -191,25 +201,15 @@
             <h2> Our services will lorem and ipsum <br> your aliquam </h2>
         </div>
     </article>
-    <section class="data2Wrapper">
+    <section id="data2Wrapper">
         <article class="container">
-            <div class="row data2">
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    365
-                    <p> Lorem ipsum </p>
-                </div>
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    98%
-                    <p> Lorem ipsum </p>
-                </div>
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    69
-                    <p> Lorem ipsum </p>
-                </div>
-                <div class="col-xs-12 col-md-6 col-lg-3">
-                    1,642
-                    <p> Lorem ipsum </p>
-                </div>
+            <div class="row data2 col-xs-12 col-md-12 col-lg-12">
+                <ul>
+                    <li class="numbers"><span>365</span>Lorem ipsum</li>
+                    <li class="numbers"><span>98%</span>Lorem ipsum</li>
+                    <li class="numbers"><span>69</span>Lorem ipsum</li>
+                    <li class="numbers"><span>1,642</span>Lorem ipsum</li>
+                </ul>
             </div>
         </article>
     </section>
@@ -221,8 +221,11 @@
                     "Fusce dapibus, tellus ac cursus commodo, tortor mauris <br> condimentum. Duis mollis, est non commodo luctus, nisi erat "
                 </div>
                 <p> Lesale Christoper, Pinterest </p>
+                <div class="white"> </div>
             </div>
+
         </article>
+
     </section>
     <article class="container ourPortfolio">
         <div class="navContainer">
@@ -250,8 +253,6 @@
                 <p> Neque Porro Quisquam </p>
                 <p> apps, icons, ui </p>
             </div>
-        </div>
-        <div class="row gallery">
             <div class="col-xs-12 col-md-6 col-lg-4">
                 <img src="../images/photo4.jpg" alt="">
                 <p> Neque Porro Quisquam </p>
@@ -267,9 +268,9 @@
                 <p> Neque Porro Quisquam </p>
                 <p> apps, icons, ui </p>
             </div>
-            <div class="row watchMore">
-              <button> Watch more </button>
-            </div>
+        </div>
+        <div class="row watchMore">
+            <button> Watch more </button>
         </div>
 
     </article>
@@ -286,16 +287,15 @@
                     <button> Send email </button>
                 </ul>
             </form>
-            <div class="col-xs-12 col-md-6 col-lg-6">
-                <ul>
-                    <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. </li>
-                    <li> 1600 Pennsylvania Ave NW, Washington, <br> DC 20500, United States of America. </li>
-                    <li> T: (202)456-1111 </li>
-                    <li> M: (202)456-1212 </li>
-                </ul>
+            <div class="col-xs-12 col-md-6 col-lg-6 contact">
+                <p class="contactText"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. </p>
+                <p class="adress"> 1600 Pennsylvania Ave NW, Washington, <br> DC 20500, United States of America. <br>
+                <a href="tel:+2024561111"> T: (202) 456-1111 </a> <br>
+                <a href="tel:+2024561212"> M: (202) 456-1212 </a> <br>
                 <a href="#"> <img src="../images/FooterIconFb.png" alt="facebook icon"> </a>
                 <a href="#"> <img src="../images/FooterIconTwitter.png" alt="twitter icon"> </a>
                 <a href="#"> <img src="../images/FooterIconGoogle.png" alt="google icon"> </a>
+                </p>
             </div>
         </div>
     </footer>
