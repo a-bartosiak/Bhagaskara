@@ -76,27 +76,42 @@ h3 {
 
 .header img {
     height: 120px;
-    &:hover, &:focus {
+
+    &:focus,
+    &:hover {
         background-image: url("../images/ShapeHover.png");
         background-size: contain;
         background-repeat: no-repeat;
-      }
+    }
 }
 
 .portfolio img {
-  background-image: url("../images/photoText.png");
-  background-size: auto;
-  background-repeat: no-repeat;
-  position: relative;
+    position: relative;
+}
+
+.photoText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    &:focus,
+    &:hover {
+        display: none;
+    }
 }
 
 .shapeArrowDown img {
     height: 60px;
-    &:hover, &:focus {
+
+    &:focus,
+    &:hover {
         background-image: url("../images/ShapeHover.png");
         background-size: contain;
         background-repeat: no-repeat;
-      }
+    }
 }
 
 .shapeArrowDown {
@@ -105,7 +120,6 @@ h3 {
     justify-content: center;
     margin: 50px;
 }
-
 //nawigacja
 
 #navigation {
@@ -135,12 +149,15 @@ h3 {
 
 .list li {
     margin: 1em;
+
     a {
-      font-weight: 400;
-      font-size: 1.2em;
-      &:hover, &:focus {
-        color: #9f449b;
-      }
+        font-weight: 400;
+        font-size: 1.2em;
+
+        &:focus,
+        &:hover {
+            color: #9f449b;
+        }
     }
     @media (min-width: 800px) {
         font-size: 1.2em;
@@ -165,26 +182,36 @@ h3 {
 
 .featureDiv img {
     height: 120px;
-    &:hover, &:focus {
+    z-index: 0;
+
+    &:focus,
+    &:hover {
         background-image: url("../images/ShapeHover2.png");
         background-size: cover;
         background-repeat: no-repeat;
-      }
+        z-index: 1;
+    }
 }
 
 h4 {
-    font-size: 1.2em;
-    color: #676767;
-    font-weight: 300;
-    text-align: center;
+    font-size: 1.6em;
+    @media (min-width: 800px) {
+        font-size: 1.2em;
+        color: #676767;
+        font-weight: 300;
+        text-align: center;
+    }
 }
 
 .featureDiv p {
-    font-size: 1em;
-    color: #676767;
-    font-weight: 300;
-    line-height: 30px;
-    text-align: center;
+    font-size: 1.5em;
+    @media (min-width: 800px) {
+        font-size: 1em;
+        color: #676767;
+        font-weight: 300;
+        line-height: 30px;
+        text-align: center;
+    }
 }
 // About us
 
@@ -240,10 +267,13 @@ span {
 }
 
 .mobileText {
-    color: #676767;
-    font-size: 0.9em;
-    font-weight: 300;
-    line-height: 36px;
+    font-size: 1.3em;
+    @media (min-width: 800px) {
+        color: #676767;
+        font-size: 0.9em;
+        font-weight: 300;
+        line-height: 36px;
+    }
 }
 
 #aboutUs button {
@@ -252,9 +282,11 @@ span {
     background-color: #9f449b;
     width: 12em;
     height: 3em;
-    &:hover, &:focus {
-      background-color: white;
-      color: #9f449b;
+
+    &:focus,
+    &:hover {
+        background-color: white;
+        color: #9f449b;
     }
 }
 
@@ -305,11 +337,15 @@ h2 {
 }
 
 .arrows img {
-    height: 60px;
-    &:hover, &:focus {
-      background-image: url("../images/ShapeHover.png");
-      background-size: contain;
-      background-repeat: no-repeat;
+    height: 90px;
+    @media (min-width: 800px) {
+      height: 60px;
+    }
+    &:focus,
+    &:hover {
+        background-image: url("../images/ShapeHover.png");
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }
 
@@ -327,20 +363,39 @@ h2 {
     margin-top: 20px;
 }
 
+.team h5,
+.team p {
+    font-size: 1.3em;
+    @media (min-width: 800px) {
+        font-size: 1em;
+    }
+}
+
 .photo {
-    background-color: #cdcdcd;
+  background-color: #cdcdcd;
+  height: 15em;
+  width: 15em;
+  border-radius: 50%;
+  @media (min-width: 800px) {
     height: 10em;
     width: 10em;
     border-radius: 50%;
+  }
+
 }
 
 .icon img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  &:hover, &:focus {
-    background-color: #9f449b;
-  }
+  height: 80px;
+  width: 80px;
+  @media (min-width: 800px) {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+    &:focus,
+    &:hover {
+        background-color: #9f449b;
+    }
 }
 //Our Skills
 
@@ -433,14 +488,13 @@ h2 {
     flex-direction: column;
     align-items: center;
     margin-top: 60px;
-
 }
 
 .quotation p {
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 80px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 80px;
 }
 
 .photo1 {
@@ -452,9 +506,9 @@ h2 {
 }
 
 .white {
-  height: 30px;
-  width: 700px;
-  background-color: white;
+    height: 30px;
+    width: 700px;
+    background-color: white;
 }
 // Our Portfolio
 
@@ -469,9 +523,11 @@ h2 {
     background-color: white;
     border-radius: 5px;
     width: 60px;
-    &:hover, &:focus {
-      background-color: #9f449b;
-      color: white;
+
+    &:focus,
+    &:hover {
+        background-color: #9f449b;
+        color: white;
     }
 }
 
@@ -518,9 +574,9 @@ h2 {
 }
 
 .watchMore {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .watchMore button {
@@ -529,9 +585,11 @@ h2 {
     border-radius: 5px;
     height: 40px;
     width: 140px;
-    &:hover, &:focus {
-      background-color: white;
-      color: #9f449b;
+
+    &:focus,
+    &:hover {
+        background-color: white;
+        color: #9f449b;
     }
 }
 // Footer
@@ -600,9 +658,11 @@ textarea {
     height: 40px;
     width: 140px;
     margin-left: 8px;
-    &:hover, &:focus {
-      background-color: white;
-      color: #9f449b;
+
+    &:focus,
+    &:hover {
+        background-color: white;
+        color: #9f449b;
     }
 }
 
@@ -617,8 +677,10 @@ textarea {
     width: 90px;
     border-radius: 50%;
     margin-left: 5px;
-    &:hover, &:focus {
-      background-color: #9f449b;
+
+    &:focus,
+    &:hover {
+        background-color: #9f449b;
     }
     @media (min-width: 800px) {
         height: 50px;
