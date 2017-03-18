@@ -570,6 +570,11 @@ h2 {
 
 
 // Our Portfolio
+
+.hide {
+  display: none;
+}
+
 .navOurPortfolio {
     font-family: 'existencelight', sans-serif;
     min-height: 50px;
@@ -618,6 +623,7 @@ h2 {
     background-color: white;
     border-radius: 5px;
     width: 60px;
+    border: 1px solid #777777;
 
     &:focus,
     &:hover {
@@ -729,6 +735,14 @@ textarea {
     width: 400px;
     height: 200px;
     margin: 10px;
+}
+
+input.invalid, textarea.invalid{
+	border: 2px solid red;
+}
+
+input.valid, textarea.valid{
+	border: 2px solid green;
 }
 
 .form button {

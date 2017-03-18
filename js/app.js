@@ -100,7 +100,6 @@ $(function() {
 
     //numbers animation
 
-
     $('.numbers span').each(function() {
         $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
@@ -115,27 +114,49 @@ $(function() {
 
     //quotation slider
 
-
     var quotes = $(".quotation ul").children();
     var quotesButton = $(".quotesButton").children();
-    // var slideInterval = setInterval(slider(),2000);
 
     function slider() {
 
-        // quotesButton.first().addClass('active');
         quotes.first().addClass('active');
 
         quotesButton.on("click", function() {
             var dots = $(this).parent().children();
             var position = dots.index($(this));
 
-            // quotesButton.removeClass('active').eq(position).addClass('active');
             quotes.removeClass('active').eq(position).addClass('active');
 
         });
     }
 
     slider();
+
+    // ourPortfolio gallery filter
+
+    var portfolioButtons = $(".buttons button");
+    var portfolioImages = $(".gallery").find("div");
+
+    // console.log(portfolioImages);
+
+    portfolioButtons.on("click", function(event) {
+        event.preventDefault();
+        var buttonDataTag = $(this).data("tag");
+
+        if ($(this).index() === 0) {
+            portfolioImages.removeClass("hide");
+        } else {
+            portfolioImages.each(function() {
+                var imagesDataTag = $(this).data("tag");
+
+                if (imagesDataTag.indexOf(buttonDataTag) == -1) {
+                    $(this).addClass("hide");
+                } else {
+                    $(this).removeClass("hide");
+                }
+            });
+        }
+    });
 
     //form
 
@@ -146,24 +167,43 @@ $(function() {
     var textArea = form.eq(2).children();
     var sendEmailButton = form.eq(3);
 
-    sendEmailButton.on("click", function(event) {
-      event.preventDefault();
-      $(".error").remove();
-
-      var nameInputValue = nameInput.val();
-      var emailInputValue = emailInput.val();
-      var textAreaValue = textArea.val();
-
-      // if (nameInputValue.length < 5 && nameInputValue.length > 20) {
-      //
-      // }
-      //
-      // var emailTest = '^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$'
-
-
-
-
+    nameInput.on('input', function() {
+        var nameTest = /^[a-zA-Z0-9._-]{5,25}$/;
+        if (nameTest.test($(this).val())) {
+            $(this).removeClass("invalid").addClass("valid");
+        } else {
+            $(this).removeClass("valid").addClass("invalid");
+        }
     });
 
+    emailInput.on('input', function() {
+        var emailTest = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (emailTest.test($(this).val())) {
+            $(this).removeClass("invalid").addClass("valid");
+        } else {
+            $(this).removeClass("valid").addClass("invalid");
+        }
+    });
+
+    textArea.keyup(function(event) {
+
+        console.log($(this).val());
+
+        if ($(this).val()) {
+            $(this).removeClass("invalid").addClass("valid");
+        } else {
+            $(this).removeClass("valid").addClass("invalid");
+        }
+    });
+
+    sendEmailButton.click(function(event) {
+        event.preventDefault();
+        if (nameInput.hasClass("valid") && emailInput.hasClass("valid") && textArea.hasClass("valid")) {
+            alert("Submitted");
+        } else {
+            alert("Error, invalid data");
+        }
+
+    });
 
 });

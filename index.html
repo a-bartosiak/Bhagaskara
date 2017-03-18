@@ -297,38 +297,38 @@
             <div class="navOurPortfolio"> Our <span> portfolio </span> </div>
         </div>
         <div class="row buttons">
-            <button> All </button>
-            <button> Web </button>
-            <button> Apps </button>
-            <button> Icons </button>
+            <button data-tag="web, apps, icons"> All </button>
+            <button data-tag="web"> Web </button>
+            <button data-tag="apps"> Apps </button>
+            <button data-tag="icons"> Icons </button>
         </div>
         <article class="row gallery">
-            <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class="col-xs-12 col-md-6 col-lg-4" data-tag="web">
                 <img src="../images/photo1.jpg" alt="">
                 <span> Neque Porro Quisquam </span>
                 <p> apps, icons, ui </p>
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class="col-xs-12 col-md-6 col-lg-4" data-tag="apps">
                 <img src="../images/photo2.jpg" alt="">
                 <span> Neque Porro Quisquam </span>
                 <p> apps, icons, ui </p>
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class="col-xs-12 col-md-6 col-lg-4" data-tag="web">
                 <img src="../images/photo3.jpg" alt="">
                 <span> Neque Porro Quisquam </span>
                 <p> apps, icons, ui </p>
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class="col-xs-12 col-md-6 col-lg-4" data-tag="icons">
                 <img src="../images/photo4.jpg" alt="">
                 <span> Neque Porro Quisquam </span>
                 <p> apps, icons, ui </p>
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class="col-xs-12 col-md-6 col-lg-4" data-tag="icons">
                 <img src="../images/photo5.jpg" alt="">
                 <span> Neque Porro Quisquam </span>
                 <p> apps, icons, ui </p>
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class="col-xs-12 col-md-6 col-lg-4" data-tag="apps">
                 <img src="../images/photo6.jpg" alt="">
                 <span> Neque Porro Quisquam </span>
                 <p> apps, icons, ui </p>
@@ -345,9 +345,9 @@
             </div>
             <form class="col-xs-12 col-md-6 col-lg-6 form">
                 <ul>
-                    <li> <input type="text" name="name" placeholder="Your Name" /> </li>
-                    <li> <input type="text" name="email" placeholder="Your Email" /> </li>
-                    <li> <textarea placeholder="Your Message"> </textarea> </li>
+                    <li> <input type="text" name="name" placeholder="Your Name" /> <span class="error"> </span> </li>
+                    <li> <input type="text" name="email" placeholder="Your Email" /> <span class="error"></span> </li>
+                    <li> <textarea placeholder="Your Message">  </textarea> <span class="error"></span></li>
                     <button> Send email </button>
                 </ul>
             </form>
