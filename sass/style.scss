@@ -118,7 +118,8 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 //nawigacja
 
@@ -529,12 +530,10 @@ h2 {
         text-transform: uppercase;
         margin-bottom: 70px;
     }
-
 }
 
 .white {
     height: 30px;
-    width: 700px;
     background-color: white;
 }
 
@@ -548,7 +547,6 @@ h2 {
 
 .quotesButton {
     height: 30px;
-    width: 700px;
     display: flex;
     flex-direction: row;
     justify-content: center;
