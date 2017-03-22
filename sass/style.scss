@@ -33,9 +33,15 @@ a {
 // }
 
 .container {
-    max-width: 1000px;
+    max-width: 700px;
     width: 100%;
     margin: auto;
+    @media (min-width: 769px) and (max-width: 1024px) {
+        max-width: 900px;
+    }
+    @media (min-width: 1025px) {
+        max-width: 1300px;
+    }
 
     .row {
         &:after,
@@ -283,25 +289,30 @@ span {
 }
 
 .aboutUs {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  @media (min-width: 769px) {
-    flex-direction: row;
-  }
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media (min-width: 769px) {
+        flex-direction: row;
+    }
 }
 
 .mobile {
     display: flex;
     justify-content: center;
+    padding: 0;
     @media (min-width: 769px) {
-      justify-content: right;
+        justify-content: right;
     }
 }
 
 .mobile img {
-    height: 240px;
-    margin: 20px;
+  height: 200px;
+  margin-bottom: 10px;
+    @media (min-width: 769px) {
+        height: 240px;
+        margin: 20px;
+    }
 }
 
 .mobileText {
@@ -309,7 +320,7 @@ span {
     font-size: 1.3em;
     font-weight: 300;
     line-height: 36px;
-    margin: 10px;
+    padding: 15px;
     text-align: center;
     @media (min-width: 769px) {
         font-size: 0.9em;
@@ -337,7 +348,6 @@ span {
         }
     }
 }
-
 //We lorem and ipsum your aliquam
 
 .weWrapper {
@@ -367,7 +377,6 @@ h2 {
     flex-direction: column;
     align-items: center;
 }
-
 //Our Team
 
 .arrows {
@@ -491,9 +500,7 @@ h2 {
         background-color: #9f449b;
     }
 }
-
 //Our services will lorem and ipsum
-
 #data2Wrapper {
     background-color: #eeeeee;
     min-height: 120px;
@@ -534,9 +541,7 @@ h2 {
     line-height: 24px;
     text-align: center;
 }
-
 //quotation
-
 #quotationWrapper {
     background-color: #eeeeee;
     min-height: 300px;
@@ -610,7 +615,6 @@ h2 {
         }
     }
 }
-
 // Our Portfolio
 
 .hide {
@@ -675,16 +679,15 @@ h2 {
 }
 
 .gallery img {
-  //   background-color: green;
-  //   @media (min-width: 400px) and (max-width: 800px) {
-  //     background-color: purple;
-  //   }
-  //   @media (min-width: 800px) {
-  //     background-color: orange;
-  //   }
     width: 100%;
     background-size: contain;
     margin-bottom: 5px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+        width: 70%;
+    }
+    @media (min-width: 1025px) {
+        width: 100%;
+    }
 }
 
 .gallery {
@@ -699,6 +702,7 @@ h2 {
     p {
         color: #777777;
         font-size: 12px;
+        margin-top: 0;
     }
 }
 
@@ -766,8 +770,12 @@ h2 {
 }
 
 .form {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.form ul {
+  padding-left: 0;
 }
 
 li {
@@ -776,7 +784,6 @@ li {
     flex-direction: column;
     font-size: 20px;
     color: #222222;
-    margin: 5px;
 }
 
 input {
@@ -813,9 +820,13 @@ textarea.valid {
     background-color: #9f449b;
     color: white;
     border-radius: 5px;
-    height: 50px;
-    width: 140px;
+    height: 60px;
+    width: 300px;
     margin-left: 10px;
+    @media (min-width: 769px) {
+        height: 50px;
+        width: 140px;
+    }
 
     &:focus,
     &:hover {
@@ -829,6 +840,10 @@ textarea.valid {
     font-size: 16px;
     color: #4b4b4b;
     margin-bottom: 30px;
+    text-align: center;
+    @media (min-width: 769px) {
+        text-align: left;
+    }
 }
 
 .adress {
@@ -836,6 +851,10 @@ textarea.valid {
     font-size: 18px;
     color: #222222;
     margin: 0;
+    text-align: center;
+    @media (min-width: 769px) {
+        text-align: left;
+    }
 }
 
 .contact img {
@@ -852,7 +871,6 @@ textarea.valid {
     @media (min-width: 769px) {
         height: 50px;
         width: 50px;
-        border-radius: 50%;
     }
 }
 
