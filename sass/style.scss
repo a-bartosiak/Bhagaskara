@@ -57,7 +57,16 @@ a {
     min-height: 100px;
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @media (min-width: 768px) and (max-width: 1024px) {
+        justify-content: center;
+        flex-direction: row;
+    }
+    @media (min-width: 1025px) {
+        justify-content: space-around;
+        flex-direction: row;
+    }
 }
 
 h1 {
@@ -87,7 +96,13 @@ h3 {
 }
 
 .header img {
-    height: 120px;
+    height: 130px;
+    @media (min-width: 769px) and (max-width: 1024px) {
+        height: 150px;
+    }
+    @media (min-width: 1025px) {
+        height: 170px;
+    }
 
     &:focus,
     &:hover {
@@ -117,6 +132,12 @@ h3 {
 
 .shapeArrowDown img {
     height: 60px;
+    @media (min-width: 769px) and (max-width: 1024px) {
+        height: 75px;
+    }
+    @media (min-width: 1025px) {
+        height: 95px;
+    }
 
     &:focus,
     &:hover {
@@ -202,8 +223,14 @@ h3 {
 }
 
 .featureDiv img {
-    height: 120px;
+    height: 130px;
     z-index: 0;
+    @media (min-width: 769px) and (max-width: 1024px) {
+        height: 150px;
+    }
+    @media (min-width: 1025px) {
+        height: 170px;
+    }
 
     &:focus,
     &:hover {
@@ -307,8 +334,8 @@ span {
 }
 
 .mobile img {
-  height: 200px;
-  margin-bottom: 10px;
+    height: 200px;
+    margin-bottom: 10px;
     @media (min-width: 769px) {
         height: 240px;
         margin: 20px;
@@ -501,6 +528,7 @@ h2 {
     }
 }
 //Our services will lorem and ipsum
+
 #data2Wrapper {
     background-color: #eeeeee;
     min-height: 120px;
@@ -542,6 +570,7 @@ h2 {
     text-align: center;
 }
 //quotation
+
 #quotationWrapper {
     background-color: #eeeeee;
     min-height: 300px;
@@ -775,7 +804,7 @@ h2 {
 }
 
 .form ul {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 li {
