@@ -36,6 +36,36 @@ $(function() {
         }, 1000);
     });
 
+    //sticky menu
+
+    var nav = $("nav");
+    var menu = $(".list");
+    var menuTop = menu.position().top;
+    console.log(menuTop, "menuTop");
+
+    $(window).on("scroll", function(event) {
+        var dist = $(this).scrollTop();
+
+        if (dist > menuTop) {
+            menu.addClass("sticky");
+        } else {
+            menu.removeClass("sticky");
+        }
+    });
+
+    $(window).on("resize", function(event) {
+
+        var dist = menu.offset().top;
+
+        if (!menu.hasClass("sticky")) {
+            menuTop = dist;
+        } else {
+            menuTop = nav.offset().top;
+        }
+
+    });
+
+
     //event slider ourTeam
 
     var leftArrow = $(".arrows img").eq(0);

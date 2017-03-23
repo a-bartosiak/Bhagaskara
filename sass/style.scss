@@ -59,7 +59,8 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    @media (min-width: 768px) and (max-width: 1024px) {
+    justify-content: space-around;
+    @media (min-width: 769px) and (max-width: 1024px) {
         justify-content: center;
         flex-direction: row;
     }
@@ -69,11 +70,17 @@ a {
     }
 }
 
+// .header .col-xs-12 {
+//   display: flex;
+//   justify-content: center;
+// }
+
 h1 {
     font-family: 'existencelight', sans-serif;
     font-size: 50px;
     margin: 30px;
-    @media (min-width: 768px) and (max-width: 1024px) {
+    text-align: center;
+    @media (min-width: 769px) and (max-width: 1024px) {
         font-size: 60px;
     }
     @media (min-width: 1025px) {
@@ -82,14 +89,14 @@ h1 {
 }
 
 h3 {
-    font-size: 3em;
+    font-size: 25px;
     font-weight: 300;
     text-align: center;
     margin: 10px;
 }
 
 .header p {
-    font-size: 1.5em;
+    font-size: 15px;
     font-weight: 300;
     text-align: center;
     margin-bottom: 90px;
@@ -97,6 +104,7 @@ h3 {
 
 .header img {
     height: 130px;
+    margin-bottom: 20px;
     @media (min-width: 769px) and (max-width: 1024px) {
         height: 150px;
     }
@@ -166,9 +174,9 @@ h3 {
 
 .navLogo {
     display: none;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
         font-family: 'existencelight', sans-serif;
-        font-size: 2em;
+        font-size: 30px;
         display: flex;
     }
 }
@@ -181,23 +189,33 @@ h3 {
 }
 
 .list li {
-    margin: 1em;
+    margin: 10px;
 
     a {
         font-weight: 400;
-        font-size: 1.2em;
+        font-size: 18px;
 
         &:focus,
         &:hover {
             color: #9f449b;
         }
     }
-    @media (min-width: 768px) {
-        font-size: 1.2em;
+    @media (min-width: 769px) {
+        font-size: 18px;
         list-style: none;
-        margin-left: 2em;
+        margin-left: 20px;
     }
 }
+
+.sticky {
+    background-color: white;
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 //feature
 
 #featureWrapper {
@@ -212,7 +230,7 @@ h3 {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
         margin-top: 15px;
         margin-bottom: 15px;
     }
@@ -242,22 +260,22 @@ h3 {
 }
 
 h4 {
-    font-size: 1.6em;
+    font-size: 24px;
     color: #676767;
     font-weight: 300;
     text-align: center;
-    @media (min-width: 768px) {
-        font-size: 1.2em;
+    @media (min-width: 769px) {
+        font-size: 20px;
     }
 }
 
 .featureDiv p {
-    font-size: 1.5em;
+    font-size: 18px;
     color: #676767;
     font-weight: 300;
     text-align: center;
-    @media (min-width: 768px) {
-        font-size: 1em;
+    @media (min-width: 769px) {
+        font-size: 16px;
         line-height: 30px;
     }
 }
@@ -278,10 +296,10 @@ h4 {
     font-family: 'existencelight', sans-serif;
     min-height: 50px;
     width: 150px;
-    font-size: 2em;
+    font-size: 26px;
     color: #676767;
-    margin: 2.5em;
-    padding-left: 0.5em;
+    margin: 20px;
+    padding-left: 15px;
     position: relative;
 }
 
@@ -329,7 +347,7 @@ span {
     justify-content: center;
     padding: 0;
     @media (min-width: 769px) {
-        justify-content: right;
+        justify-content: flex-end;
     }
 }
 
@@ -338,19 +356,19 @@ span {
     margin-bottom: 10px;
     @media (min-width: 769px) {
         height: 240px;
-        margin: 20px;
+        margin-top: 40px;
     }
 }
 
 .mobileText {
     color: #676767;
-    font-size: 1.3em;
+    font-size: 16px;
     font-weight: 300;
     line-height: 36px;
     padding: 15px;
     text-align: center;
     @media (min-width: 769px) {
-        font-size: 0.9em;
+        font-size: 14px;
         margin: 20px;
         text-align: left;
     }
@@ -363,7 +381,7 @@ span {
     width: 15em;
     height: 4em;
     margin-top: 20px;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
         width: 12em;
         height: 3em;
         margin-top: 10px;
@@ -711,7 +729,7 @@ h2 {
     width: 100%;
     background-size: contain;
     margin-bottom: 5px;
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
         width: 70%;
     }
     @media (min-width: 1025px) {
