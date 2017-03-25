@@ -65,6 +65,17 @@ $(function() {
 
     });
 
+    //hamburger menu
+
+    var hamburgerMenu = $(".hamburger");
+
+    menu.addClass("hidden");
+
+    hamburgerMenu.on("click", function(event) {
+      event.preventDefault();
+
+      menu.toggleClass("hidden");
+    });
 
     //event slider ourTeam
 
@@ -111,6 +122,8 @@ $(function() {
 
     var data = $("#data");
     var allSpans = data.find(".data span");
+
+    console.log(allSpans);
 
     allSpans.eq(0).animate({
         width: "90%"

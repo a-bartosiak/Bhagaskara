@@ -7,6 +7,12 @@
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -22,15 +28,6 @@ a {
     background-size: cover;
     color: white;
 }
-// body {
-//   background-color: green;
-//   @media (min-width: 400px) and (max-width: 800px) {
-//     background-color: purple;
-//   }
-//   @media (min-width: 800px) {
-//     background-color: orange;
-//   }
-// }
 
 .container {
     max-width: 700px;
@@ -59,7 +56,6 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-around;
     @media (min-width: 769px) and (max-width: 1024px) {
         justify-content: center;
         flex-direction: row;
@@ -69,11 +65,6 @@ a {
         flex-direction: row;
     }
 }
-
-// .header .col-xs-12 {
-//   display: flex;
-//   justify-content: center;
-// }
 
 h1 {
     font-family: 'existencelight', sans-serif;
@@ -102,6 +93,16 @@ h3 {
     margin-bottom: 90px;
 }
 
+.column {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.col-md-4 {
+    padding: 0;
+}
+
 .header img {
     height: 130px;
     margin-bottom: 20px;
@@ -119,24 +120,23 @@ h3 {
         background-repeat: no-repeat;
     }
 }
-
-.portfolio img {
-    position: relative;
-}
-
-.photoText {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-
-    &:focus,
-    &:hover {
-        display: none;
-    }
-}
+// .portfolio img {
+//     position: relative;
+// }
+//
+// .photoText {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     margin: auto;
+//
+//     &:focus,
+//     &:hover {
+//         display: none;
+//     }
+// }
 
 .shapeArrowDown img {
     height: 60px;
@@ -168,17 +168,36 @@ h3 {
     min-height: 50px;
     background-color: white;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin: 10px;
 }
 
-.navLogo {
+.navLogo a {
     display: none;
+    font-family: 'existencelight', sans-serif;
+    font-size: 30px;
     @media (min-width: 769px) {
-        font-family: 'existencelight', sans-serif;
-        font-size: 30px;
         display: flex;
+
     }
+}
+
+.hamburger {
+    display: block;
+    background-image: url("../images/hamburger.png");
+    background-size: contain;
+    background-color: white;
+    border: transparent;
+    height: 60px;
+    width: 60px;
+    @media (min-width: 769px) {
+        display: none;
+    }
+}
+
+.hidden {
+    display: none;
 }
 
 .list {
@@ -209,15 +228,16 @@ h3 {
 
 .sticky {
     background-color: white;
+    -webkit-box-shadow: -1px 6px 13px 0 rgba(163,161,163,1);
+    -moz-box-shadow: -1px 6px 13px 0 rgba(163,161,163,1);
+    box-shadow: -1px 6px 13px 0 rgba(163,161,163,1);
     z-index: 999;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
 }
-
 //feature
-
 #featureWrapper {
     background-color: #eeeeee;
     min-height: 250px;
@@ -227,12 +247,12 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
     @media (min-width: 769px) and (max-width: 1024px) {
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     @media (min-width: 1025px) {
         margin-top: 100px;
@@ -255,7 +275,7 @@ h3 {
         background-image: url("../images/ShapeHover2.png");
         background-size: cover;
         background-repeat: no-repeat;
-        z-index: 1;
+        z-index: 999;
     }
 }
 
@@ -264,6 +284,7 @@ h4 {
     color: #676767;
     font-weight: 300;
     text-align: center;
+    margin: 15px;
     @media (min-width: 769px) {
         font-size: 20px;
     }
@@ -282,9 +303,12 @@ h4 {
 // About us
 
 #aboutUs {
-    min-height: 180px;
+    min-height: 160px;
     margin-top: 30px;
-    margin-bottom: 160px;
+    margin-bottom: 60px;
+    @media (min-width: 769px) {
+        margin-bottom: 160px;
+    }
 }
 
 .navContainer {
@@ -378,12 +402,12 @@ span {
     color: white;
     border-radius: 5px;
     background-color: #9f449b;
-    width: 15em;
-    height: 4em;
+    width: 170px;
+    height: 50px;
     margin-top: 20px;
     @media (min-width: 769px) {
-        width: 12em;
-        height: 3em;
+        width: 150px;
+        height: 45px;
         margin-top: 10px;
 
         &:focus,
@@ -405,7 +429,7 @@ span {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 30px;
     font-weight: 300;
     color: white;
     text-align: center;
@@ -461,34 +485,39 @@ h2 {
     justify-content: center;
     flex-direction: column;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .team h5 {
-    font-size: 1.4em;
+    font-size: 18px;
+    margin-bottom: 2px;
     color: #484848;
     text-transform: uppercase;
+    margin: 5px;
     @media (min-width: 769px) {
-        font-size: 1.2em;
+        font-size: 16px;
         margin-bottom: 0;
     }
 }
 
 .team p {
-    font-size: 1.2em;
+    font-size: 16px;
+    color: #777777;
+    margin: 5px;
     @media (min-width: 769px) {
-        color: #777777;
-        font-size: 1em;
+        font-size: 14px;
     }
 }
 
-.photo {
-    background-color: #cdcdcd;
-    height: 15em;
-    width: 15em;
+.photo img {
+    background-size: cover;
+    height: 220px;
+    width: 220px;
     border-radius: 50%;
+    margin: 20px;
     @media (min-width: 769px) {
-        height: 12em;
-        width: 12em;
+        height: 170px;
+        width: 170px;
     }
 }
 
@@ -523,8 +552,8 @@ h2 {
 }
 
 .progressBar {
-    margin-bottom: 1.5em;
-    padding-left: 2em;
+    margin-bottom: 14px;
+    padding-left: 20px;
     height: 20px;
 
     span {
@@ -536,12 +565,13 @@ h2 {
 
 .data {
     height: 20px;
-    width: 20em;
+    width: 280px;
     background-color: #f0f0f0;
 
     span {
         display: block;
         height: 100%;
+        width: 0;
         background-color: #9f449b;
     }
 }
@@ -624,7 +654,7 @@ h2 {
         font-size: 12px;
         font-weight: bold;
         text-transform: uppercase;
-        margin-bottom: 70px;
+        margin: 10px;
     }
 }
 
@@ -633,10 +663,9 @@ h2 {
     background-color: white;
 }
 
-.photo1 {
-    background-color: #aaaaaa;
-    height: 8em;
-    width: 8em;
+.photo1 img {
+    height: 160px;
+    width: 160px;
     border-radius: 50%;
     margin-bottom: 25px;
 }
@@ -762,6 +791,7 @@ h2 {
 .watchMore button {
     background-color: #9f449b;
     color: white;
+    margin: 10px;
     border-radius: 5px;
     height: 40px;
     width: 140px;
