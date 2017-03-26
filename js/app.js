@@ -123,23 +123,27 @@ $(function() {
     var data = $("#data");
     var allSpans = data.find(".data span");
 
-    console.log(allSpans);
+    function animateSpans() {
 
-    allSpans.eq(0).animate({
-        width: "90%"
-    }, 2000);
+      allSpans.eq(0).animate({
+          width: "90%"
+      }, 2000);
 
-    allSpans.eq(1).animate({
-        width: "75%"
-    }, 2000);
+      allSpans.eq(1).animate({
+          width: "75%"
+      }, 2000);
 
-    allSpans.eq(2).animate({
-        width: "70%"
-    }, 2000);
+      allSpans.eq(2).animate({
+          width: "70%"
+      }, 2000);
 
-    allSpans.eq(3).animate({
-        width: "86%"
-    }, 2000);
+      allSpans.eq(3).animate({
+          width: "86%"
+      }, 2000);
+    }
+
+    animateSpans();
+
 
     //numbers animation
 
