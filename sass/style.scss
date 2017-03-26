@@ -174,16 +174,16 @@ h3 {
 }
 
 .navLogo a {
-    display: none;
+    display: none !important;
     font-family: 'existencelight', sans-serif;
     font-size: 30px;
     @media (min-width: 769px) {
-        display: flex;
+        display: flex !important;
     }
 }
 
 .hamburger {
-    display: block;
+    display: inline-block;
     background-image: url("../images/hamburger.png");
     background-size: contain;
     background-color: white;
@@ -195,15 +195,14 @@ h3 {
     }
 }
 
-.hidden {
-    display: none;
-}
-
 .list {
-    display: flex;
+  display: flex;
+    @media (min-width: 769px) {
+    display: flex !important;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    }
 }
 
 .list li {
