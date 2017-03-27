@@ -164,15 +164,19 @@ $(function() {
     var quotes = $(".quotation ul").children();
     var quotesButton = $(".quotesButton").children();
 
+    console.log(quotesButton);
+
     function slider() {
 
         quotes.first().addClass('active');
+        quotesButton.first().addClass('active');
 
         quotesButton.on("click", function() {
             var dots = $(this).parent().children();
             var position = dots.index($(this));
 
             quotes.removeClass('active').eq(position).addClass('active');
+            quotesButton.removeClass('active').eq(position).addClass('active');
 
         });
     }

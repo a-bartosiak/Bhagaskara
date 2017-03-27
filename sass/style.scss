@@ -104,7 +104,7 @@ h3 {
 }
 
 .header img {
-    height: 130px;
+    height: 135px;
     margin-bottom: 20px;
     @media (min-width: 769px) and (max-width: 1024px) {
         height: 150px;
@@ -157,10 +157,9 @@ h3 {
 
 .shapeArrowDown {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 //nawigacja
 
@@ -196,12 +195,12 @@ h3 {
 }
 
 .list {
-  display: flex;
+    display: flex;
     @media (min-width: 769px) {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
 
@@ -229,7 +228,7 @@ h3 {
     -webkit-box-shadow: -1px 6px 13px 0 rgba(163,161,163,1);
     -moz-box-shadow: -1px 6px 13px 0 rgba(163,161,163,1);
     box-shadow: -1px 6px 13px 0 rgba(163,161,163,1);
-    z-index: 999;
+    z-index: 1000;
     width: 100%;
     position: fixed;
     top: 0;
@@ -317,12 +316,12 @@ h4 {
 
 .nav {
     font-family: 'existencelight', sans-serif;
+    text-align: center;
     min-height: 50px;
     width: 150px;
     font-size: 26px;
     color: #676767;
     margin: 20px;
-    padding-left: 15px;
     position: relative;
 }
 
@@ -341,15 +340,15 @@ h4 {
 .nav::after {
     border-top: 1px solid #9f449b;
     border-right: 1px solid #9f449b;
-    top: 0;
-    left: 120px;
+    top: -5px;
+    left: 125px;
 }
 
 .nav::before {
     border-bottom: 1px solid #9f449b;
     border-left: 1px solid #9f449b;
     top: 20px;
-    left: 0;
+    left: 5px;
 }
 
 span {
@@ -551,7 +550,7 @@ h2 {
 }
 
 .progressBar {
-    margin-bottom: 14px;
+    margin-top: 10px;
     padding-left: 20px;
     height: 20px;
 
@@ -601,12 +600,17 @@ h2 {
 
 .data2 li {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .numbers span {
     color: #222222;
     font-size: 40px;
     padding: 10px;
+    text-align: center;
 }
 
 .numbers {
@@ -614,7 +618,6 @@ h2 {
     font-size: 12px;
     font-weight: 300;
     line-height: 24px;
-    text-align: center;
 }
 //quotation
 
@@ -669,6 +672,12 @@ h2 {
     margin-bottom: 25px;
 }
 
+.quotesButton .active {
+  background-color: #aaaaaa;
+  margin: 5px;
+
+}
+
 .quotesButton {
     height: 30px;
     display: flex;
@@ -701,10 +710,9 @@ h2 {
     min-height: 50px;
     font-size: 2em;
     color: #676767;
-    margin: 1em;
-    padding-left: 0.5em;
-    padding-bottom: 0.5em;
+    margin: 30px;
     position: relative;
+    text-align: center;
 }
 
 .navOurPortfolio::after,
@@ -714,7 +722,6 @@ h2 {
     position: absolute;
     width: 20px;
     height: 20px;
-    z-index: -1;
     right: 0;
     bottom: 0;
 }
@@ -723,14 +730,14 @@ h2 {
     border-top: 1px solid #9f449b;
     border-right: 1px solid #9f449b;
     top: -5px;
-    left: 170px;
+    left: 155px;
 }
 
 .navOurPortfolio::before {
     border-bottom: 1px solid #9f449b;
     border-left: 1px solid #9f449b;
     top: 25px;
-    left: 0;
+    left: -15px;
 }
 
 .buttons {
@@ -813,9 +820,7 @@ h2 {
     min-height: 50px;
     font-size: 2em;
     color: #676767;
-    margin: 2em;
-    padding-left: 0.5em;
-    padding-bottom: 0.5em;
+    margin: 30px;
     position: relative;
 }
 
@@ -826,7 +831,6 @@ h2 {
     position: absolute;
     width: 20px;
     height: 20px;
-    z-index: -1;
     right: 0;
     bottom: 0;
 }
@@ -835,47 +839,45 @@ h2 {
     border-top: 1px solid #9f449b;
     border-right: 1px solid #9f449b;
     top: -5px;
-    left: 160px;
+    left: 145px;
 }
 
 .navGetInTouch::before {
     border-bottom: 1px solid #9f449b;
     border-left: 1px solid #9f449b;
     top: 25px;
-    left: 0;
+    left: -15px;
 }
 
 .form {
     display: flex;
-    justify-content: center;
-}
-
-.form ul {
-    padding-left: 0;
+    flex-direction: column;
 }
 
 li {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     font-size: 20px;
     color: #222222;
+    @media (min-width: 769px) {
+        justify-content: flex-end;
+    }
 }
 
 input {
     height: 50px;
-    width: 300px;
-    margin: 10px;
-    border: 1px solid lightgrey;
-    @media (min-width: 769px) {
-        width: 400px;
-    }
 }
 
 textarea {
     height: 200px;
+}
+
+input,
+textarea {
     width: 300px;
     margin: 10px;
+    padding-left: 15px;
     border: 1px solid lightgrey;
     @media (min-width: 769px) {
         width: 400px;
@@ -898,10 +900,15 @@ textarea.valid {
     border-radius: 5px;
     height: 60px;
     width: 300px;
-    margin-left: 10px;
+    padding-left: 35px;
+    display: flex;
+    align-self: center;
+    padding-left: 120px;
+    margin-bottom: 20px;
     @media (min-width: 769px) {
         height: 50px;
         width: 140px;
+        padding-left: 35px;
     }
 
     &:focus,
