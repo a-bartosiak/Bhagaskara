@@ -118,25 +118,6 @@ $(function() {
         }
     });
 
-    //animation starts on scroll
-
-    // function animationStartsWhenSeen(elem) {
-    //   var $elem = $(elem);
-    //
-    //   var scrollElem = ((navigator.userAgent.toLowerCase().indexOf("webkit") != -1) ? 'body' : 'html');
-    //   var viewportTop = $(scrollElem).scrollTop();
-    //   var viewportBottom = viewportTop + $(window).height();
-    //
-    //   var elemTop = Math.round($elem.offset().top);
-    //   var elemBottom = elemTop + $elem.height();
-    //
-    //   return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
-    // }
-    //
-    // function checkAnimation() {
-    //   var $elem = $("#data").find(".data span");
-    // }
-
     //progressBars animation
 
     var data = $("#data");
@@ -161,21 +142,36 @@ $(function() {
       }, 2000);
     }
 
-    animateSpans();
-
-
     //numbers animation
 
-    $('.numbers span').each(function() {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 2000,
-            easing: 'swing',
-            step: function(now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
+    function animateNumbers() {
+      $(".numbers span").each(function() {
+          $(this).prop("Counter", 0).animate({
+              Counter: $(this).text()
+          }, {
+              duration: 2000,
+              easing: "swing",
+              step: function(now) {
+                  $(this).text(Math.ceil(now));
+              }
+          });
+      });
+    }
+
+    animateNumbers();
+
+    //animations starts on scroll
+
+    var ourSkills = $(".ourTeam");
+    var ourSkillsTop = ourSkills.position().top;
+
+    $(window).on("scroll", function(event) {
+        var dist = $(this).scrollTop();
+
+        if (dist > ourSkillsTop) {
+          animateSpans();
+          // animateNumbers();
+        }
     });
 
     //quotation slider
