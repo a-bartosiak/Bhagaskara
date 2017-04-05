@@ -179,8 +179,6 @@ $(function() {
     var quotes = $(".quotation ul").children();
     var quotesButton = $(".quotesButton").children();
 
-    console.log(quotesButton);
-
     function slider() {
 
         quotes.first().addClass('active');
@@ -197,6 +195,15 @@ $(function() {
     }
 
     slider();
+
+    // var moveQuotes = setInterval(slider(),1000);
+    // var itemWidth = quotes.outerWidth();
+    // var leftValue = itemWidth * (-1);
+    //
+    // $(".quotation ul").eq(0).before($(".quotation ul").eq(5));
+    // $(".quotation ul").css({"left" : leftValue})
+
+
 
     // ourPortfolio gallery filter
 
